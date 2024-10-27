@@ -1,6 +1,6 @@
 # AMS 380 Data Analysis Midterm 1 - Study Sheet
 
-## Lecture 1
+## Lecture 1 - Statistical Learning
 
 Using a vector $\ X $ the equation to represent the value of $ Y $ in terms of $ X $ can be written as:
 $$ Y = f(X) + \epsilon $$
@@ -68,6 +68,43 @@ K \space classes \space from \space k = 0 \to k \newline
 
 C(x) = k \space where \space  k = \underset{k}{\operatorname{argmax}} \space [p_0(x), ..., p_K(x)]
 $$
-The missclassification rate in this situation can be the number of misclassifications over the number of classifications.
+The missclassification rate in this situation can be the number of misclassifications over the number of classifications. 
 
+## Lecture 2 - Multiple Linear Regression
 
+$$
+Y = B_0 + B_1X + \epsilon \newline
+\hat{y} = \hat\beta_0 + \hat\beta_1x \newline
+$$
+Epsilon ($\epsilon$) is the error term with the hat over the terms indicating they are estimators of the true value.
+$$
+\hat{y}_i = \beta_0 + \beta_1x_i \newline
+e_i = y_i - \hat{y}_i
+$$
+In this instance the $i$ th residual referes to $e_i$ where $\hat{y}_i = \beta_0 + \beta_1x_i$ is the $i$ th prediction.
+
+The residial sum of squares is:
+$$
+\sum e_i^2 = \sum(y_i-\hat\beta_0-\hat\beta_1x_i)^2 = \sum (y_i - \hat{y}_i)^2
+$$
+
+The OLS estimators are:
+$$
+\sum(y_i-\hat\beta_0-\hat\beta_1x_i)^2 = 0 \newline
+dRSS/d\beta_0 = -2\sum(y_i - \hat\beta_0 - \hat\beta_1x) \newline
+0 = -2\sum(y_i - \hat\beta_0 - \hat\beta_1x) \newline
+\hat\beta_o = \bar{y} - \hat\beta_1 \bar{x} \newline
+dRSS/d\beta_1 = -2\sum x_i (y_i - \hat\beta_0 - \hat\beta_1x) \newline
+\hat\beta_1 = \sum(x_i - \bar{x})(y_i - \bar{y})/\sum(x_i - \bar{x})^2 \newline
+$$
+
+Some notations for later:
+$$
+S_{xx} = \sum(x_i - \bar{x})^2 \space S_x = \sum(x_i - \bar{x}) \newline
+SE(x) = \sigma_x/\sqrt{n}
+$$
+
+Variance/SE for simple linear regression:
+$$
+Var(\hat\beta_o) = \sigma^2(\frac{1}{n} + \frac{\bar{x}}{S_{xx}})
+$$
