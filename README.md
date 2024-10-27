@@ -59,3 +59,15 @@ E[(y - \hat{f}(x))^2] = Var(\hat{f}(x)) + [Bias(\hat{f}(x))]^2 + Var(\epsilon)
 Bias[\hat{f}(x)] = E[\hat{f}(x)] - f(x)
 \newline
 $$
+
+
+Qualitative Labels are when they are distinct groups without numercal values, eg [white, black].
+To choose a class based on input data you would choose: 
+$$
+K \space classes \space from \space k = 0 \to k \newline
+
+C(x) = k \space where \space  k = \underset{k}{\operatorname{argmax}} \space [p_0(x), ..., p_K(x)]
+$$
+The missclassification rate in this situation can be the number of misclassifications over the number of classifications.
+
+
