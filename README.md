@@ -2,7 +2,7 @@
 
 ## Lecture 1
 
-Using a vector $ X $ the equation to represent the value of $ Y $ in terms of $ X $ can be written as:
+Using a vector $\ X $ the equation to represent the value of $ Y $ in terms of $ X $ can be written as:
 $$ Y = f(X) + \epsilon $$
 where $ \epsilon $ captures all measurement errors and additional discrepencies.
 
